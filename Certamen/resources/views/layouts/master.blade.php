@@ -21,16 +21,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active @if(Route::current()->getName()=='bienvenida.index') active @endif" aria-current="page" href="{{route('bienvenida.index')}}">Inicio</a>
+                            <a class="nav-link @if(Route::current()->getName()=='bienvenida.index') active @endif" aria-current="page" href="{{route('bienvenida.index')}}">Inicio</a>
                         </li>
                         {{-- artista --}}
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle @if(Route::current()->getName()=='alumno.alumno' or Route::current()->getName()=='alumno.propuesta') active @endif" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle @if(Route::current()->getName()=='artista.index') active @endif" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Artista
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" aria-current="page" href="{{route('')}}">Ver Fotos</a></li>
-                                <li><a class="dropdown-item" aria-current="page" href="{{route('')}}">Crear Fotos</a></li>
+                                <li><a class="dropdown-item" aria-current="page" href="{{route('artista.index')}}">Ver Fotos</a></li>
+                                <li><a class="dropdown-item" aria-current="page" href="{{route('artista.FotosBan')}}">Fotos Baneadas</a></li>
                             </ul>
                         </li>
                         {{-- fin artista --}}
@@ -47,6 +47,9 @@
                             </ul>
                         </li>
                         {{-- fin admin --}}
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">Cerrar Secion</a>
+                        </li>
                     </ul>
                 </div>
             </div>
