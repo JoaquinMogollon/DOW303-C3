@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id('id');
             $table->string('titulo',20);
             $table->string('archivo',100);
-            $table->boolean('baneaa');
-            $table->string('motivo_ban');
+            $table->boolean('baneda');
+            $table->text('motivo_ban');
             $table->string('cuenta_user',20);
             $table->timestamps();
         });

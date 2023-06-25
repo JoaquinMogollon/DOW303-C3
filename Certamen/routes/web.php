@@ -13,6 +13,7 @@ use App\Http\Controllers\PerfilesController;
 use App\Http\Controllers\AdministradorController;
 
 Route::get('/',[Inicio::class,'index'])->name('bienvenida.index');
+Route::get('/login',[Inicio::class,'logout'])->name('bienvenida.login');
 
 Route::get('/admin',[AdministradorController::class,'index'])->name('admin.admin');
 

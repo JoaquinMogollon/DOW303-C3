@@ -10,4 +10,8 @@ class Inicio extends Controller
         //dd('Hola mundo'); //dump and die
         return view('bienvenida.index');
     }
+
+    public function logout(){
+        return view('bienvenida.login');
+    }
 }
