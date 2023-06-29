@@ -5,13 +5,13 @@ use Illuminate\Support\Facades\Route;
 /* HomePage */
 use App\Http\Controllers\Inicio;
 
-/* Artista */
-use App\Http\Controllers\ArtistaController;
+/* Alumno */
+use App\Http\Controllers\AlumnoController;
+use App\Http\Controllers\ProfesorController;
 
 /* Admin */
 
 use App\Http\Controllers\AdministradorController;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +30,6 @@ use App\Http\Controllers\AdministradorController;
  */
 
 Route::get('/',[Inicio::class,'index'])->name('bienvenida.index');
+Route::get('/login',[Inicio::class,'logout'])->name('bienvenida.login');
 
 Route::get('/admin',[AdministradorController::class,'index'])->name('admin.admin');
-
-Route::get('/artista',[ArtistaController::class,'index'])->name('artista.artista');

@@ -7,7 +7,7 @@
             <div class="card-body" style="padding: 3cm 0cm 3cm 15cm">
                 <div class="card" style="height: 8cm; width: 18cm">
                     <div class="text text-center">
-                        <h1>Trabajo Certamen II</h1>
+                        <h1>Trabajo Certamen III</h1>
                         <br>
                         <br>
                         <h3>Integrantes:</h3>
