@@ -12,13 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('imagenes', function (Blueprint $table) {
-            $table->id('id');
+            $table->unsignedInteger('id')->autoIncrement();
             $table->string('titulo',20);
             $table->string('archivo',100);
-            $table->boolean('baneaa');
-            $table->string('motivo_ban');
-            $table->string('cuenta_user',20);
+            $table->boolean('baneada')->default(false);
+            $table->text('motivo_ban')->nullable();
+            $table->string('cuenta_user');
             $table->timestamps();
+            $table->foreign('cuenta_user')->references('user')->on('cuentas');
         });
     }
 
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('imagenes');
     }
 };

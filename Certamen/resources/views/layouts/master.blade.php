@@ -25,12 +25,12 @@
                         </li>
                         {{-- artista --}}
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle @if(Route::current()->getName()=='alumno.alumno' or Route::current()->getName()=='alumno.propuesta') active @endif" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle @if(Route::current()->getName()=='artista.artista' or Route::current()->getName()=='artista.artista') active @endif" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Artista
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" aria-current="page" href="{{route('')}}">Ver Fotos</a></li>
-                                <li><a class="dropdown-item" aria-current="page" href="{{route('')}}">Crear Fotos</a></li>
+                                <li><a class="dropdown-item" aria-current="page" href="{{route('artista.artista')}}">Lista de Fotos</a></li>
+                                <li><a class="dropdown-item" aria-current="page" href="{{-- {{route('')}} --}}">Crear Fotos</a></li>
                             </ul>
                         </li>
                         {{-- fin artista --}}

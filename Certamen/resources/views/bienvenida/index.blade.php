@@ -11,7 +11,7 @@
                         <br>
                         <br>
                         <h3>Integrantes:</h3>
-                        <h4>Matias Castillo, Oscar Cabrioler y Joaquin Mogollon</h4>
+                        <h4>Matias Castillo y Joaquin Mogollon</h4>
                     </div>
                 </div>
             </div>
