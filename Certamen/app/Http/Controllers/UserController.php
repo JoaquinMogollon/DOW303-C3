@@ -17,7 +17,7 @@ class UserController extends Controller
         } */
 
         $cuentas = Cuenta::all();
-        return view('bienvenida.index',compact('user'));
+        return view('bienvenida.index',compact('cuentas'));
     }
 
     public function create()
@@ -55,12 +55,12 @@ class UserController extends Controller
     }
 
     public function login(Request $request){
-        //dd($request->only('email','password'));
+        //dd($request->only('user','password'));
         $credenciales = $request->only('user','password');
 
         if (Auth::attempt($credenciales)){
             //credenciales correctas
-            $cuentas = Cuenta::where('user',$request->user)->first();
+            $cuentas = Cuenta::where('nonbre',$request->nombre)->first();
             //$cuentas->registrarUltimoLogin();
             return redirect()->route('bienvenida.index');
         }

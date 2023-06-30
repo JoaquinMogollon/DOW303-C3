@@ -19,7 +19,7 @@ class UserRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array|string>
      */
-    public function rules(): array
+   /*  public function rules(): array
     {
         return [
             'user'=>'required|min:1|max:20|unique:cuentas,user',
@@ -27,7 +27,7 @@ class UserRequest extends FormRequest
             'nombre'=>'required|min:2|max:20',
             'apellido'=>'required|min:2|max:20',
         ];
-    }
+    } */
 
     public function messages(){
         return[

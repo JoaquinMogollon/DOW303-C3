@@ -22,7 +22,8 @@ class PerfilesController extends Controller
      */
     public function index()
     {
-        //
+        $cuentas = Cuenta::all();
+        return view("bienvenida.index");
     }
 
     /**
@@ -43,7 +44,15 @@ class PerfilesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cuentas = new Cuentas(); 
+        $cuentas->user = $request->user;
+        $cuentas->password = $request->password()->fill([
+            'password' => Hash::make($request->newPassword)
+        ])->save();
+        $cuentas->nombre = $request->nombre;
+        $cuentas->apellido = $request->apellido;
+        $imagen->save();
+        return redirect()->route('bienvenida.crearUsuario');
     }
 
     /**

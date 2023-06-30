@@ -7,7 +7,7 @@
     <div class="card">
         <div class="card-header bg-dark text-white">Agregar Foto</div>
         <div class="card-body">
-            <form method="POST" action="{{-- {{route('imagenes.store')}} --}}" enctype="multipart/form-data">
+            <form method="POST" action="{{route('imagenes.store')}}" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
                     <label for="titulo" class="form-label">Titulo</label>
