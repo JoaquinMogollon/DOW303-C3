@@ -12,6 +12,7 @@ class Inicio extends Controller
     }
 
     public function logout(){
+        
         return view('bienvenida.login');
     }
 }

@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 class PerfilesController extends Controller
 {
-    public function artistas(){
+    public function index(){
+        
         return view('');
     }
 }

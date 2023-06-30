@@ -10,10 +10,6 @@ class ArtistaController extends Controller
         return view('artista.artista');
     }
 
-    public function subirfoto(){
-        return view('artista.subirfoto');
-    }
-
     public function listadoFotos(){
         return view('artista.index');
     }
