@@ -29,8 +29,8 @@
                             Artista
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" aria-current="page" href="{{route('artista.artista')}}">Lista de Imagenes</a></li>
-                                <li><a class="dropdown-item" aria-current="page" href="{{-- {{route('artista.artista')}} --}}">Lista de Imagenes Baneadas</a></li>
+                                <li><a class="dropdown-item" aria-current="page" href="{{route('artista.index')}}">Lista de Imagenes</a></li>
+                                <li><a class="dropdown-item" aria-current="page" href="{{route('artista.FotosBan')}}">Lista de Imagenes Baneadas</a></li>
                                 <li><a class="dropdown-item" aria-current="page" href="{{route('artista.subirfoto')}}">Subir Foto</a></li>
                             </ul>
                         </li>
