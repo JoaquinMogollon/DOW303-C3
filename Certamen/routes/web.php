@@ -39,4 +39,6 @@ Route::get('/admin',[AdministradorController::class,'index'])->name('admin.admin
 
 /* Artista */
 Route::get('/artista',[ArtistaController::class,'index'])->name('artista.artista');
+Route::get('/artista/Fotos',[ArtistaController::class,'listadoFotos'])->name('artista.index');
+Route::get('/artista/Fotos_Baneadas',[ArtistaController::class,'FotosBan'])->name('artista.FotosBan');
 Route::get('/artista/subirfoto',[ArtistaController::class,'subirfoto'])->name('artista.subirfoto');
