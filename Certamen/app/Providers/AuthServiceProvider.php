@@ -24,6 +24,6 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
 
         //Gates
-        Gate::define('usuarios-listar');
+        //Gate::define('usuarios-listar');
     }
 }

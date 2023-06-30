@@ -49,7 +49,7 @@
                         </li>
                         {{-- fin admin --}}
                         <li class="nav-item">
-                            <a class="nav-link text-left" href="{{route('bienvenida.login')}}" class="nav-link active">Cerrar Secion</a>
+                            <a class="nav-link text-left" href="{{route('user.logout')}}" class="nav-link active">Cerrar Secion</a>
                         </li>
                     </ul>
                 </div>

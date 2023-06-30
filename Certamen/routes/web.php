@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /* HomePage */
 use App\Http\Controllers\Inicio;
@@ -14,10 +15,14 @@ use App\Http\Controllers\AdministradorController;
 /* Imagenes */
 use App\Http\Controllers\ImagenController;
 
+//Route::post('users/login',[UserController::class,'login'])->name('bienvenida.index');
+
 /* Publico */
 
 Route::get('/',[Inicio::class,'index'])->name('bienvenida.index');
 Route::get('/login',[Inicio::class,'logout'])->name('bienvenida.login');
+Route::post('user/login',[UserController::class,'login'])->name('user.login');
+Route::get('user/logout',[UserController::class,'logout'])->name('user.logout');
 
 /* Admin */
 Route::get('/admin',[AdministradorController::class,'index'])->name('admin.admin');

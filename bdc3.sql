@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-06-2023 a las 03:57:45
+-- Tiempo de generación: 30-06-2023 a las 08:07:01
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -61,6 +61,13 @@ CREATE TABLE `imagenes` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `imagenes`
+--
+
+INSERT INTO `imagenes` (`id`, `titulo`, `archivo`, `baneada`, `motivo_ban`, `cuenta_user`, `created_at`, `updated_at`) VALUES
+(1, 'El arte de programar', 'public/imagenes/HX0Hkx6WGjFaxZSz3DzwU5jek90Vd511hwVCGKuX.png', 0, NULL, 'joato', '2023-06-30 08:20:36', '2023-06-30 08:20:36');
 
 -- --------------------------------------------------------
 
@@ -171,7 +178,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT de la tabla `imagenes`
 --
 ALTER TABLE `imagenes`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `migrations`

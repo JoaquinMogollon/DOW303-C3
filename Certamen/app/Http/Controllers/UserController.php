@@ -17,7 +17,7 @@ class UserController extends Controller
         } */
 
         $cuentas = Cuenta::all();
-        return view('user.index',compact('user'));
+        return view('bienvenida.index',compact('user'));
     }
 
     public function create()
@@ -26,25 +26,19 @@ class UserController extends Controller
     }
 
     public function store(UsuariosRequest $request){
-        //dd($request->entrenador);
-        $equipo = new Equipo();
-        $equipo->nombre = $request->nombre;
-        $equipo->entrenador = $request->entrenador;
-        $equipo-> save(); //esto es lo mismo que ....insert into
-        return redirect()->route('equipos.index');
-
+        //
     }
 
-    public function show(Usuario $usuario)
+    public function show(Cuenta $cuentas)
     {
         //
     }
 
-    public function edit(Usuario $usuario)
+    public function edit(Cuenta $cuentas)
     {
         //  
     }
-    public function update(Request $request, Usuario $usuario)
+    public function update(Request $request, Cuenta $cuentas)
     {
         //
     }
@@ -52,23 +46,23 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Usuario  $usuario
-     * @return \Illuminate\Http\Response
+     * @param  \App\Models\Cuenta  $cuentas
+     * @return \Illuminate\Http\Cuenta
      */
-    public function destroy(Usuario $usuario)
+    public function destroy(Cuenta $cuentas)
     {
         //
     }
 
     public function login(Request $request){
         //dd($request->only('email','password'));
-        $credenciales = $request->only('email','password');
+        $credenciales = $request->only('user','password');
 
         if (Auth::attempt($credenciales)){
             //credenciales correctas
-            $usuario = Usuario::where('email',$request->email)->first();
-            $usuario->registrarUltimoLogin();
-            return redirect()->route('home.index');
+            $cuentas = Cuenta::where('user',$request->user)->first();
+            //$cuentas->registrarUltimoLogin();
+            return redirect()->route('bienvenida.index');
         }
         else{
             //credenciales incorrectas
@@ -78,6 +72,6 @@ class UserController extends Controller
 
     public function logout(){
         Auth::logout();
-        return redirect()->route('home.login');
+        return redirect()->route('bienvenida.login');
     }
 }

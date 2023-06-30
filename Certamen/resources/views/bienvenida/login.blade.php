@@ -16,25 +16,27 @@
                 <div class="row bg-light" style="height: 25rem;">
 
                     <!-- Inicio sesion -->
-                    <div class="col-lg-8 bg-white">
+                    <div class="col-lg-12 bg-white">
                         <h4>Inicio de Sesión</h4>
                         <div class="card">
                             <div class="card-body">
-                                <form method="POST" action="{{-- {{route('user.login')}} --}}">
+                                <form method="POST" action="{{route('user.login')}}">
                                 @csrf
                                     <div class="mb-3">
-                                        <label for="email" class="form-label">Correo</label>
-                                        <input type="text" id="email" name="email" class="form-control">
+                                        <label for="user" class="form-label">Usuario</label>
+                                        <input type="text" id="user" name="user" class="form-control">
                                     </div>
                                     <div class="mb-3">
                                         <label for="password" class="form-label">Contraseña</label>
                                         <input type="password" id="password" name="password" class="form-control">
                                     </div>
-                                    <div class="mb-3 text-end">
-                                        <button type="submit" class="btn btn-success">Iniciar Sesión</button>
-                                    </div>
-                                    <div class="mb-3 text-end">
-                                        <button type="redirect" class="btn btn-success" onclick="/* {{route('user.create')}} */">Crear Usuario</button>
+                                    <div class="row">
+                                        <div class="col">
+                                            <button type="redirect" class="btn btn-primary" {{-- onclick="{{route('bienvenida.sing')}}" --}}>Crear Usuario</button>
+                                        </div>
+                                        <div class="col text-end">
+                                            <button type="submit" class="btn btn-success">Iniciar Sesión</button>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
