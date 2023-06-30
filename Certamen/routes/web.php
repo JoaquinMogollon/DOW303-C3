@@ -5,10 +5,8 @@ use Illuminate\Support\Facades\Route;
 /* HomePage */
 use App\Http\Controllers\Inicio;
 
-/* Alumno */
-use App\Http\Controllers\AlumnoController;
-use App\Http\Controllers\ProfesorController;
-
+/* Artista */
+use App\Http\Controllers\ArtistaController;
 /* Admin */
 
 use App\Http\Controllers\AdministradorController;
@@ -29,7 +27,16 @@ use App\Http\Controllers\AdministradorController;
 });
  */
 
+/* Publico */
+
 Route::get('/',[Inicio::class,'index'])->name('bienvenida.index');
 Route::get('/login',[Inicio::class,'logout'])->name('bienvenida.login');
 
+/* Admin */
 Route::get('/admin',[AdministradorController::class,'index'])->name('admin.admin');
+
+
+
+/* Artista */
+Route::get('/artista',[ArtistaController::class,'index'])->name('artista.artista');
+Route::get('/artista/subirfoto',[ArtistaController::class,'index'])->name('artista.subirfoto');

@@ -29,8 +29,9 @@
                             Artista
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" aria-current="page" href="{{route('')}}">Ver Fotos</a></li>
-                                <li><a class="dropdown-item" aria-current="page" href="{{route('')}}">Crear Fotos</a></li>
+                                <li><a class="dropdown-item" aria-current="page" href="{{route('artista.artista')}}">Lista de Imagenes</a></li>
+                                <li><a class="dropdown-item" aria-current="page" href="{{-- {{route('artista.artista')}} --}}">Lista de Imagenes Baneadas</a></li>
+                                <li><a class="dropdown-item" aria-current="page" href="{{route('artista.subirfoto')}}">Subir Foto</a></li>
                             </ul>
                         </li>
                         {{-- fin artista --}}
@@ -48,7 +49,7 @@
                         </li>
                         {{-- fin admin --}}
                         <li class="nav-item">
-                            <a href="{{route('bienvenida.login')}}" class="nav-link active">Cerrar Secion</a>
+                            <a class="nav-link text-left" href="{{route('bienvenida.login')}}" class="nav-link active">Cerrar Secion</a>
                         </li>
                     </ul>
                 </div>

@@ -9,4 +9,8 @@ class ArtistaController extends Controller
     public function index(){
         return view('artista.artista');
     }
+
+    public function subirfoto(){
+        return view('artista.subirfoto');
+    }
 }
