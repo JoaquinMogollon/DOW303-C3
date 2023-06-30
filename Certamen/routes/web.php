@@ -32,6 +32,8 @@ Route::get('/artista',[ArtistaController::class,'index'])->name('artista.artista
 Route::get('/artista/Fotos',[ArtistaController::class,'listadoFotos'])->name('artista.index');
 Route::get('/artista/Fotos_Baneadas',[ArtistaController::class,'FotosBan'])->name('artista.FotosBan');
 
+/* Route::get('/'); */
+
 /* Imagenes */
 Route::get('/artista/subirfoto',[ImagenController::class,'subirfoto'])->name('artista.subirfoto');
 Route::post('/artista/subirfoto',[ImagenController::class,'store'])->name('artista.subirfoto');
